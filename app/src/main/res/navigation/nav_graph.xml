@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initialFragment">
+
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.example.market.SignInUp.InitialFragment"
+        android:label="fragment_initial"
+        tools:layout="@layout/fragment_initial" >
+
+        <action
+            android:id="@+id/action_initialFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_initialFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.market.SignInUp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.market.SignInUp.SignUpFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_SignUpFragment_to_LoginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.market.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.market.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_PostFragment_to_HomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellDetailFragment"
+        android:name="com.example.market.SellDetailFragment"
+        android:label="fragment_sell_detail"
+        tools:layout="@layout/fragment_sell_detail" />
+
+</navigation>
