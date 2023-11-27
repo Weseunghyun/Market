@@ -1,0 +1,39 @@
+<!-- fragment_chat.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/recipientInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter recipient..." />
+    <EditText
+        android:id="@+id/messageInput"
+        android:layout_width="395dp"
+        android:layout_height="111dp"
+        android:layout_below="@id/recipientInput"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Type your message..."
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine"
+        android:maxLines="4" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="132dp"
+        android:text="Send" />
+
+</RelativeLayout>

@@ -22,8 +22,11 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //매개변수로 받아온 inflater 객체의 inflate 메소드를 사용해 fragment_signUp 레이아웃 파일을
+        //실제 View 객체로 전환해줌.
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
+        //로그인을 위한 auth 와 저장이 되어있는지 확인하기위한 데이터베이스 firestore 객체를 가져온다.
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
@@ -31,10 +34,12 @@ class LoginFragment : Fragment() {
         val passwordEditText = view.findViewById<EditText>(R.id.PasswordEditText)
         val loginBtn = view.findViewById<Button>(R.id.loginBtn)
 
+        //로그인 버튼을 눌렀을 때 행하는 동작 구현
         loginBtn.setOnClickListener {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
+            //auth의 이 메소드를 이용해서 이메일과 패스워드를 주고 로그인을 시도
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {

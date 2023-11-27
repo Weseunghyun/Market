@@ -10,8 +10,9 @@ data class ProductDetail(
     val price: Int,
     val content: String,
     val seller: String,
-    val isAvailable: Boolean
+    val sellerEmail: String,
+    val sell: Boolean
 ) : Parcelable {
-    constructor() : this("", "", 0, "", "", true)
+    constructor() : this("", "", 0, "", "", "",true)
 }
 
