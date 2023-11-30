@@ -45,8 +45,8 @@ class SellDetailFragment : Fragment() {
                                 Log.d("SellDetailFragment", "ProductDetail: $productDetail")
                                 titleTextView.text = productDetail.title
                                 contentTextView.text = productDetail.content
-                                priceTextView.text = productDetail.price.toString()
-                                sellerTextView.text = productDetail.seller
+                                priceTextView.text = productDetail.price.toString() + "원"
+                                sellerTextView.text = "판매자 : " + productDetail.seller
                                 isAvailableTextView.text = if (productDetail.sell) "판매중" else "판매완료"
 
                                 val sendMessageButton = view.findViewById<Button>(R.id.messageButton)

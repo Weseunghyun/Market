@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.example.market.R
 
 class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val purchaseTextView: TextView = itemView.findViewById(R.id.purchaseTextView)
-    val messageTextView: TextView = itemView.findViewById(R.id.messageTextView)
+    val purchaseTextView: TextView = itemView.findViewById(R.id.purchaseValueTextView)
+    val messageTextView: TextView = itemView.findViewById(R.id.messageValueTextView)
 
     fun bind(chat: Chat, context: Context, navController: NavController) {
         Glide.with(context).load(chat.purchase)

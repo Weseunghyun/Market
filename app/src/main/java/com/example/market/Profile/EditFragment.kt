@@ -42,6 +42,8 @@ class EditFragment : Fragment() {
             val sellerTextView = view.findViewById<TextView>(R.id.sellerTextView)
             val isAvailableCheckBox = view.findViewById<CheckBox>(R.id.isAvailableCheckBox)
             val editButton = view.findViewById<Button>(R.id.editButton)
+//            val ScrollView = view.findViewById<Button>(R.id.scrollView)
+
 
             // Firestore에서 productId 가져오기
             db.collection("posts")
@@ -54,7 +56,7 @@ class EditFragment : Fragment() {
                         titleTextView.text = product.title
                         contentTextView.text = product.content
                         priceTextView.text = product.price.toString()
-                        sellerTextView.text = product.seller
+                        sellerTextView.text =   product.seller
                         isAvailableCheckBox.isChecked = product.sell
 
                         editButton.setOnClickListener {
@@ -68,11 +70,12 @@ class EditFragment : Fragment() {
                                 contentEditText.visibility = View.VISIBLE
                                 priceEditText.visibility = View.VISIBLE
                                 isAvailableCheckBox.visibility = View.VISIBLE
-                                sellerTextView.visibility = View.VISIBLE
+
 
                                 titleTextView.visibility = View.GONE
                                 contentTextView.visibility = View.GONE
                                 priceTextView.visibility = View.GONE
+//                                ScrollView.visibility = View.GONE
 
                                 editButton.text = "수정완료"
 
@@ -111,11 +114,13 @@ class EditFragment : Fragment() {
                                         titleEditText.visibility = View.GONE
                                         contentEditText.visibility = View.GONE
                                         priceEditText.visibility = View.GONE
-                                        isAvailableCheckBox.visibility = View.GONE
+
 
                                         titleTextView.visibility = View.VISIBLE
                                         contentTextView.visibility = View.VISIBLE
                                         priceTextView.visibility = View.VISIBLE
+                                        sellerTextView.visibility = View.VISIBLE
+//                                        ScrollView.visibility = View.VISIBLE
 
                                         titleTextView.text = title
                                         contentTextView.text = content

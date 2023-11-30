@@ -8,7 +8,15 @@
         android:id="@+id/purchaseTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="purchase: " />
+        android:text="sender:   "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/purchaseValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/purchaseTextView"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/messageTextView"
@@ -16,6 +24,17 @@
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Message: " />
+        android:text="message:   "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/messageValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchaseTextView"
+        android:layout_toEndOf="@id/messageTextView"
+        android:layout_alignBaseline="@id/messageTextView"
+        android:textColor="@android:color/black" />
+
 
 </RelativeLayout>
