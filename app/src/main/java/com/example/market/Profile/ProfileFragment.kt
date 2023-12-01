@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.market.Home.Product
@@ -30,6 +31,9 @@ class ProfileFragment : Fragment() {
         // 어댑터 설정
         adapter = ProductAdapter(requireContext(), mutableListOf(), findNavController(), true)
         recyclerView.adapter = adapter
+
+        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, (recyclerView.layoutManager as LinearLayoutManager).orientation)
+        recyclerView.addItemDecoration(dividerItemDecoration)
 
         db = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()

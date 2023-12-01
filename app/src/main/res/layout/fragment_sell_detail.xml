@@ -79,6 +79,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="20dp"
+        android:background="#FFE76A"
         android:text="판매자에게 메시지 보내기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.market.Home.ChatAdapter
@@ -34,6 +35,11 @@ class ChatFragment : Fragment() {
 
         chatView.layoutManager = LinearLayoutManager(context)
         chatView.adapter = chatAdapter
+
+        // DividerItemDecoration 추가
+        val dividerItemDecoration = DividerItemDecoration(chatView.context, (chatView.layoutManager as LinearLayoutManager).orientation)
+        chatView.addItemDecoration(dividerItemDecoration)
+
 
         loadMessage()
         return view

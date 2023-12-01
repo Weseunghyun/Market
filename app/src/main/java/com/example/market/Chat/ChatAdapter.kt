@@ -9,7 +9,8 @@ import com.example.market.Chat.ChatFragment
 import com.example.market.Chat.ChatViewHolder
 import com.example.market.R
 
-class ChatAdapter(
+class
+ChatAdapter(
     private val context: ChatFragment,
     private var chatList: List<Chat>,
 ) : RecyclerView.Adapter<ChatViewHolder>() {

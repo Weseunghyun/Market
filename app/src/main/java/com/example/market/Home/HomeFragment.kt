@@ -10,6 +10,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +36,10 @@ class HomeFragment : Fragment() {
         recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view) // 여기에 수정
         //리사이클러 뷰의 레이아웃 매니저 설정.
         recyclerView.layoutManager = LinearLayoutManager(context)
+
+        // DividerItemDecoration 추가
+        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, (recyclerView.layoutManager as LinearLayoutManager).orientation)
+        recyclerView.addItemDecoration(dividerItemDecoration)
 
         // 필터 버튼 클릭 시 동작 정의, Dialog를 이용해 필터링을 구현했음.
         val filterButton = view.findViewById<Button>(R.id.filterButton)

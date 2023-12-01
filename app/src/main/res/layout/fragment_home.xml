@@ -12,6 +12,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:background="#FFE76A"
         android:text="Logout" />
 
     <Button
@@ -23,6 +24,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:background="#FFE76A"
         android:text="Filter" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -36,13 +38,14 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="25dp"
         android:clickable="true"
         android:contentDescription="post"
         android:focusable="true"
-        app:srcCompat="@drawable/ic_add"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true" />
+        app:backgroundTint="#FFE76A"
+        app:srcCompat="@drawable/ic_add" />
 
 </RelativeLayout>
