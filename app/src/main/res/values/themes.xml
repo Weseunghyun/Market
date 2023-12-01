@@ -4,7 +4,12 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:statusBarColor">#FFE76A</item>
-        <item name="android:textColor">#000000</item> <!-- 글씨 색상을 검정색으로 설정 -->
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
     </style>
 
     <style name="Theme.Market" parent="Base.Theme.Market" />

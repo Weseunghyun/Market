@@ -42,8 +42,7 @@ class EditFragment : Fragment() {
             val sellerTextView = view.findViewById<TextView>(R.id.sellerTextView)
             val isAvailableCheckBox = view.findViewById<CheckBox>(R.id.isAvailableCheckBox)
             val editButton = view.findViewById<Button>(R.id.editButton)
-//            val ScrollView = view.findViewById<Button>(R.id.scrollView)
-
+            val wonText = view.findViewById<TextView>(R.id.textViewWon)
 
             // Firestore에서 productId 가져오기
             db.collection("posts")
@@ -71,11 +70,10 @@ class EditFragment : Fragment() {
                                 priceEditText.visibility = View.VISIBLE
                                 isAvailableCheckBox.visibility = View.VISIBLE
 
-
                                 titleTextView.visibility = View.GONE
                                 contentTextView.visibility = View.GONE
                                 priceTextView.visibility = View.GONE
-//                                ScrollView.visibility = View.GONE
+                                wonText.visibility = View.GONE
 
                                 editButton.text = "수정완료"
 
@@ -115,12 +113,10 @@ class EditFragment : Fragment() {
                                         contentEditText.visibility = View.GONE
                                         priceEditText.visibility = View.GONE
 
-
                                         titleTextView.visibility = View.VISIBLE
                                         contentTextView.visibility = View.VISIBLE
                                         priceTextView.visibility = View.VISIBLE
                                         sellerTextView.visibility = View.VISIBLE
-//                                        ScrollView.visibility = View.VISIBLE
 
                                         titleTextView.text = title
                                         contentTextView.text = content
